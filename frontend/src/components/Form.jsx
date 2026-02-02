@@ -9,9 +9,11 @@ export default function Form({ onAddTask }){
  }
 
  let handleSubmit = (event) => {
-    event.preventDefault(); 
+    event.preventDefault();
+    if (input.trim() !== "") { 
     onAddTask(input);
     setInput("");
+    }
   };
 
     return(

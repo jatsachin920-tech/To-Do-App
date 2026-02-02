@@ -1,6 +1,5 @@
 import './ShowTasks.css';
-
-export default function ShowTasks({ allTasks = [] }) {
+export default function ShowTasks({ allTasks = [], onDeleteTask }) {
   const bgClasses = ["list-group-item-primary", "list-group-item-success", "list-group-item-danger", "list-group-item-warning", "list-group-item-info"];
 
   return (
@@ -20,7 +19,11 @@ export default function ShowTasks({ allTasks = [] }) {
            <span className="fw-bold flex-grow-1 text-start">
               {task}
            </span>
-           <button className="btn btn-sm btn-light rounded-circle">Delete</button>
+           <button className="btn btn-sm btn-light rounded-circle"
+            onClick={() => {
+              console.log("Delete button clicked for index:", index);
+            onDeleteTask(index)}
+          }>Delete</button>
            </li>
           ))}
           </ul>

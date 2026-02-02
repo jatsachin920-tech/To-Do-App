@@ -11,10 +11,15 @@ let[tasks,setTasks]=useState([]);
     }
   };
 
+  const deleteTask = (indexToDelete) => {
+    const updatedTasks = tasks.filter((_, index) => index !== indexToDelete);
+  setTasks(updatedTasks);
+  };
+
   return (
   <div className="app-container">
       <Form onAddTask={addTask} />
-      <ShowTasks allTasks={tasks} />
+      <ShowTasks allTasks={tasks} onDeleteTask={deleteTask} />
     </div>
   );
 }

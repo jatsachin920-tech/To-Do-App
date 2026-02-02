@@ -1,0 +1,63 @@
+.signup-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f1f5f9;
+}
+
+.signup-form {
+  background: white;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 400px;
+}
+
+.signup-form h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: black !important;
+}
+
+.input-group {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.input-group label {
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #334155;
+  font-size: 0.9rem;
+}
+
+/* Input aur Select dono ki styling ek jaisi */
+.input-group input, 
+.input-group select {
+  padding: 12px;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 8px;
+  outline: none;
+  font-size: 1rem;
+  background-color: white; /* Select ke liye zaroori hai */
+}
+
+.input-group input:focus,
+.input-group select:focus {
+  border-color: #4f46e5;
+}
+
+.signup-btn {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(to right, #4f46e5, #9333ea);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
+}
